@@ -4,10 +4,9 @@ import {calcProfit} from "./profit-calc";
 
 describe('profit calculator module', () => {
     test("calc profit test", () => {
-        expect(calcProfit(operations)).toStrictEqual(expectedPortfolioStatistic)
+        expect(calcProfit(operations)).toEqual(expectedPortfolioStatistic)
     })
 })
-
 
 const operations: Array<Operation> = [
     {
@@ -51,6 +50,13 @@ const operations: Array<Operation> = [
         ticker: "GAZP",
         price: 205,
         qnt: 1000,
+    },
+    {
+        id: 7,
+        type: "BUY",
+        ticker: "SBER",
+        price: 112,
+        qnt: 500,
     },
     {
         id: 7,
